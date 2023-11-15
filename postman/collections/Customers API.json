@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "700bd4c0-5bff-4811-900d-d1e6f374e4e1",
+		"name": "Customers API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "30941109-700bd4c0-5bff-4811-900d-d1e6f374e4e1"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "{customerId}",
+					"item": [
+						{
+							"name": "/Customers/:customerId/",
+							"id": "ea448bad-83ee-4c37-8fc9-1c18e9212864",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/Customers/:customerId/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Customers",
+										":customerId",
+										""
+									],
+									"variable": [
+										{
+											"id": "46414581-168c-4ab5-a1a0-ce5365a0ff29",
+											"key": "customerId",
+											"value": "<string>",
+											"description": "(Required) The unique identifier of a customer"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "6d19374a-d559-468c-afd7-fbc2a708d96d",
+									"name": "The customer corresponding to the provided `customerId`",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/Customers/:customerId/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customers",
+												":customerId",
+												""
+											],
+											"variable": [
+												{
+													"id": "46414581-168c-4ab5-a1a0-ce5365a0ff29",
+													"key": "customerId",
+													"value": "<string>",
+													"description": "(Required) The unique identifier of a customer"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<string>\",\n  \"name\": \"<string>\",\n  \"email\": \"<string>\"\n}"
+								},
+								{
+									"id": "39b26f8d-6f76-48d0-80ad-7f14e01d2753",
+									"name": "No customer found for the provided `customerId`",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/Customers/:customerId/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customers",
+												":customerId",
+												""
+											],
+											"variable": [
+												{
+													"id": "46414581-168c-4ab5-a1a0-ce5365a0ff29",
+													"key": "customerId",
+													"value": "<string>",
+													"description": "(Required) The unique identifier of a customer"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								},
+								{
+									"id": "a4552d5d-8741-4e1a-90e7-baa3a08b4cb2",
+									"name": "Unexpected error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/Customers/:customerId/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"Customers",
+												":customerId",
+												""
+											],
+											"variable": [
+												{
+													"id": "46414581-168c-4ab5-a1a0-ce5365a0ff29",
+													"key": "customerId",
+													"value": "<string>",
+													"description": "(Required) The unique identifier of a customer"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\"\n}"
+								}
+							]
+						}
+					],
+					"id": "853fb1f9-9bc3-4067-b9d4-0b4e411e7163"
+				}
+			],
+			"id": "555d0f04-525a-49c6-84f4-85260f78e6c9"
+		}
+	],
+	"variable": [
+		{
+			"id": "b4e8626b-8f84-446e-8d59-a81f2fa14c23",
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
