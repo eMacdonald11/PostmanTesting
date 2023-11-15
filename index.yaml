@@ -2,8 +2,9 @@ openapi: '3.0.0'
 info:
   version: '1.0.0'
   title: 'Customers API'
+  description: What's shaking party people!?
 paths:
-  /Customers/{customerId}/:
+  /Customers/{customerId}:
     parameters:
       - name: customerId
         description: The unique identifier of a customer
@@ -12,6 +13,7 @@ paths:
         schema:
           $ref: '#/components/schemas/CustomerId'
     get:
+      summary: GET Request
       responses:
         '200':
           description: The customer corresponding to the provided `customerId`
